@@ -607,7 +607,7 @@ if ( ! function_exists( 'twentyten_posted_on' ) ) :
 			'meta-prep meta-prep-author',
 			sprintf(
 				'<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
-				get_permalink(),
+				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				get_the_date()
 			),
