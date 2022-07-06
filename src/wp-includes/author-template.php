@@ -510,7 +510,7 @@ function wp_list_authors( $args = '' ) {
 				$link .= '(';
 			}
 
-			$link .= '<a href="' . get_author_feed_link( $author->ID, $args['feed_type'] ) . '"';
+			$link .= '<a href="' . esc_url( get_author_feed_link( $author->ID, $args['feed_type'] ) ) . '"';
 
 			$alt = '';
 			if ( ! empty( $args['feed'] ) ) {
