@@ -144,7 +144,7 @@ class Tests_Category_WpListCategories extends WP_UnitTestCase {
 			)
 		);
 
-		$this->assertStringContainsString( "<li class='cat-item-all'><a href='" . home_url( '/' ) . "'>All</a></li>", $found );
+		$this->assertStringContainsString( "<li class='cat-item-all'><a href='" . esc_url( home_url( '/' ) ) . "'>All</a></li>", $found );
 	}
 
 	public function test_show_option_all_link_should_respect_page_for_posts() {
