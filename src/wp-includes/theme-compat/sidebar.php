@@ -55,7 +55,7 @@ _deprecated_file(
 					printf(
 						/* translators: 1: Site link, 2: Archive date. */
 						__( 'You are currently browsing the %1$s blog archives for the day %2$s.' ),
-						sprintf( '<a href="%1$s/">%2$s</a>', get_bloginfo( 'url' ), get_bloginfo( 'name' ) ),
+						sprintf( '<a href="%1$s/">%2$s</a>', esc_url( get_bloginfo( 'url' ) ), get_bloginfo( 'name' ) ),
 						get_the_time( __( 'l, F jS, Y' ) )
 					);
 				?>
@@ -67,7 +67,7 @@ _deprecated_file(
 					printf(
 						/* translators: 1: Site link, 2: Archive month. */
 						__( 'You are currently browsing the %1$s blog archives for %2$s.' ),
-						sprintf( '<a href="%1$s/">%2$s</a>', get_bloginfo( 'url' ), get_bloginfo( 'name' ) ),
+						sprintf( '<a href="%1$s/">%2$s</a>', esc_url( get_bloginfo( 'url' ) ), get_bloginfo( 'name' ) ),
 						get_the_time( __( 'F, Y' ) )
 					);
 				?>
@@ -79,7 +79,7 @@ _deprecated_file(
 					printf(
 						/* translators: 1: Site link, 2: Archive year. */
 						__( 'You are currently browsing the %1$s blog archives for the year %2$s.' ),
-						sprintf( '<a href="%1$s/">%2$s</a>', get_bloginfo( 'url' ), get_bloginfo( 'name' ) ),
+						sprintf( '<a href="%1$s/">%2$s</a>', esc_url( get_bloginfo( 'url' ) ), get_bloginfo( 'name' ) ),
 						get_the_time( 'Y' )
 					);
 				?>
@@ -91,7 +91,7 @@ _deprecated_file(
 					printf(
 						/* translators: 1: Site link, 2: Search query. */
 						__( 'You have searched the %1$s blog archives for <strong>&#8216;%2$s&#8217;</strong>. If you are unable to find anything in these search results, you can try one of these links.' ),
-						sprintf( '<a href="%1$s/">%2$s</a>', get_bloginfo( 'url' ), get_bloginfo( 'name' ) ),
+						sprintf( '<a href="%1$s/">%2$s</a>', esc_url( get_bloginfo( 'url' ) ), get_bloginfo( 'name' ) ),
 						esc_html( get_search_query() )
 					);
 				?>
@@ -103,7 +103,7 @@ _deprecated_file(
 					printf(
 						/* translators: %s: Site link. */
 						__( 'You are currently browsing the %s blog archives.' ),
-						sprintf( '<a href="%1$s/">%2$s</a>', get_bloginfo( 'url' ), get_bloginfo( 'name' ) )
+						sprintf( '<a href="%1$s/">%2$s</a>', esc_url( get_bloginfo( 'url' ) ), get_bloginfo( 'name' ) )
 					);
 				?>
 				</p>
