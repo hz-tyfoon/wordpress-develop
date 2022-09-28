@@ -866,7 +866,7 @@ function wp_list_users( $args = array() ) {
 				$row .= '(';
 			}
 
-			$row .= '<a href="' . get_author_feed_link( $user->ID, $parsed_args['feed_type'] ) . '"';
+			$row .= '<a href="' . esc_url( get_author_feed_link( $user->ID, $parsed_args['feed_type'] ) ) . '"';
 
 			$alt = '';
 			if ( ! empty( $parsed_args['feed'] ) ) {
