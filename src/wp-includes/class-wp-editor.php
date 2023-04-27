@@ -488,7 +488,7 @@ final class _WP_Editors {
 						if ( ! empty( $mce_external_languages ) ) {
 							foreach ( $mce_external_languages as $name => $path ) {
 								if ( @is_file( $path ) && @is_readable( $path ) ) {
-									include_once $path;
+									require_once $path;
 									$ext_plugins   .= $strings . "\n";
 									$loaded_langs[] = $name;
 								}

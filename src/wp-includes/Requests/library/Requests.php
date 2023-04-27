@@ -9,4 +9,4 @@
  * @since 6.2.0
  */
 
-include_once ABSPATH . WPINC . '/class-requests.php';
+require_once ABSPATH . WPINC . '/class-requests.php';

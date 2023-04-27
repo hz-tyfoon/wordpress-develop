@@ -375,7 +375,7 @@ $GLOBALS['wp_plugin_paths'] = array();
 // Load must-use plugins.
 foreach ( wp_get_mu_plugins() as $mu_plugin ) {
 	$_wp_plugin_file = $mu_plugin;
-	include_once $mu_plugin;
+	require_once $mu_plugin;
 	$mu_plugin = $_wp_plugin_file; // Avoid stomping of the $mu_plugin variable in a plugin.
 
 	/**
@@ -395,7 +395,7 @@ if ( is_multisite() ) {
 		wp_register_plugin_realpath( $network_plugin );
 
 		$_wp_plugin_file = $network_plugin;
-		include_once $network_plugin;
+		require_once $network_plugin;
 		$network_plugin = $_wp_plugin_file; // Avoid stomping of the $network_plugin variable in a plugin.
 
 		/**
@@ -450,7 +450,7 @@ foreach ( wp_get_active_and_valid_plugins() as $plugin ) {
 	wp_register_plugin_realpath( $plugin );
 
 	$_wp_plugin_file = $plugin;
-	include_once $plugin;
+	require_once $plugin;
 	$plugin = $_wp_plugin_file; // Avoid stomping of the $plugin variable in a plugin.
 
 	/**

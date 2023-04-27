@@ -1238,7 +1238,7 @@ function uninstall_plugin( $plugin ) {
 		define( 'WP_UNINSTALL_PLUGIN', $file );
 
 		wp_register_plugin_realpath( WP_PLUGIN_DIR . '/' . $file );
-		include_once WP_PLUGIN_DIR . '/' . dirname( $file ) . '/uninstall.php';
+		require_once WP_PLUGIN_DIR . '/' . dirname( $file ) . '/uninstall.php';
 
 		return true;
 	}
@@ -1250,7 +1250,7 @@ function uninstall_plugin( $plugin ) {
 		unset( $uninstallable_plugins );
 
 		wp_register_plugin_realpath( WP_PLUGIN_DIR . '/' . $file );
-		include_once WP_PLUGIN_DIR . '/' . $file;
+		require_once WP_PLUGIN_DIR . '/' . $file;
 
 		add_action( "uninstall_{$file}", $callable );
 
@@ -2311,7 +2311,7 @@ function plugin_sandbox_scrape( $plugin ) {
 	}
 
 	wp_register_plugin_realpath( WP_PLUGIN_DIR . '/' . $plugin );
-	include_once WP_PLUGIN_DIR . '/' . $plugin;
+	require_once WP_PLUGIN_DIR . '/' . $plugin;
 }
 
 /**
